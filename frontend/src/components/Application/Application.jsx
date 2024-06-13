@@ -1,4 +1,4 @@
-import axios from './../../config/axiosConfig';
+import axios from '../../config/axiosConfig';
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
