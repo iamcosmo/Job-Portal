@@ -39,7 +39,8 @@ app.use("/api/v1/application", applicationRouter);
 
 app.use(errorMiddleware);
 
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 8080;
+// const PORT = 5501;
 
 app.listen(PORT, () => {
   console.log(

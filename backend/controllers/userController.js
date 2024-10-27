@@ -4,12 +4,19 @@ import ErrorHandler from "../middlewares/error.js";
 import { sendToken } from "../utils/jwtToken.js";
 
 export const register = catchAsyncErrors(async (req, res, next) => {
+
+  //console.log('Registering data: ', req.body);
+  
   const { name, email, phone, password, role } = req.body;
   if (!name || !email || !phone || !password || !role) {
+    //console.log('Please fill full form!');
+    
     return next(new ErrorHandler("Please fill full form!"));
   }
   const isEmail = await User.findOne({ email });
   if (isEmail) {
+    //console.log('Email already registered!');
+    
     return next(new ErrorHandler("Email already registered!"));
   }
   const user = await User.create({
@@ -19,6 +26,9 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     password,
     role,
   });
+
+  //console.log('User :',user);
+  
   sendToken(user, 201, res, "User Registered!");
 });
 

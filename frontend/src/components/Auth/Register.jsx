@@ -34,6 +34,8 @@ const Register = () => {
       setRole("");
       setIsAuthorized(true);
     } catch (error) {
+      //console.log('error registering: ',error);
+      
       toast.error(error.response.data.message);
     }
   };
