@@ -32,6 +32,7 @@ const Register = () => {
       setPassword("");
       setPhone("");
       setRole("");
+      setUser(data.user);
       setIsAuthorized(true);
     } catch (error) {
       //console.log('error registering: ',error);
