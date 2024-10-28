@@ -18,21 +18,26 @@ import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 
 const App = () => {
-  const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get("/api/v1/user/getuser", {
-          withCredentials: true,
-        });
-        setUser(response.data.user);
-        setIsAuthorized(true);
-      } catch (error) {
-        setIsAuthorized(false);
-      }
-    };
-    fetchUser();
-  }, [isAuthorized]);
+  //const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       console.log('fetching user details....');
+        
+  //       const response = await axios.get("/api/v1/user/getuser", {
+  //         withCredentials: true,
+  //       });
+
+  //       console.log('Response Fetch user: ',response);
+        
+  //       setUser(response.data.user);
+  //       setIsAuthorized(true);
+  //     } catch (error) {
+  //       setIsAuthorized(false);
+  //     }
+  //   };
+  //   fetchUser();
+  // }, [isAuthorized]);
 
   return (
     <>
