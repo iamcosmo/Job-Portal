@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
 export const dbConnection = async () => {
-  try {
-    console.log(process.env.MONGO_URI);
+  try {    
     await mongoose.connect(process.env.MONGO_URI, {
       dbName: "MERN_JOB_SEEKING_WEBAPP",
     });
