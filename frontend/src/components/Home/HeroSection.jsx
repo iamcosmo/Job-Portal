@@ -36,9 +36,9 @@ const HeroSection = () => {
             <h1>Find a job that suits</h1>
             <h1>your interests and skills</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              voluptate repellat modi quidem aliquid eaque ducimus ipsa et,
-              facere mollitia!
+              Discover thousands of job opportunities that match your skills and interests. 
+              Whether you are a fresh graduate or an experienced professional, 
+              our platform connects you with top companies looking for talent like you.
             </p>
           </div>
           <div className="image">
